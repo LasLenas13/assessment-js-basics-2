@@ -32,6 +32,14 @@
 
 //CODE HERE
 
+let pizza = {
+    name: "Meat Lovers",
+    price: 20,
+    category: "Entree",
+    popularity: 9,
+    rating: 8,
+    tags: ["Family", "Spicy", "Gluten-Free"]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +52,8 @@
 
 //CODE HERE
 
+let howPop = pizza.popularity
+console.log(howPop)
 
 /*
     Second, log the second tag in your pizza's
@@ -54,6 +64,7 @@
 
 //CODE HERE
 
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -64,6 +75,8 @@
 
 //CODE HERE
 
+const {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -74,6 +87,8 @@
 
 //CODE HERE
 
+const {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -89,7 +104,48 @@
 
 //CODE HERE
 
-
+let foodArr = [
+    {
+        name: "Tacos",
+        price: 15,
+        category: "Entree",
+        popularity: 7,
+        rating: 8,
+        tags: ["Carne", "Fish", "Chicken"]
+      },
+      {
+        name: "Nachos",
+        price: 11,
+        category: "App",
+        popularity: 8,
+        rating: 8,
+        tags: ["Veggie", "Super Cheesey", "with Meat"]
+      },
+      {
+        name: "Burrito",
+        price: 17,
+        category: "Entree",
+        popularity: 9,
+        rating: 8,
+        tags: ["Shrimp", "Jumbo", "Smothered"]
+      },
+      {
+        name: "Queso-Fundido",
+        price: 7,
+        category: "App",
+        popularity: 5,
+        rating: 7,
+        tags: ["Four Cheese", "Extra-Thick", "Add-Bacon"]
+      },
+      {
+        name: "Mole",
+        price: 19,
+        category: "Entree",
+        popularity: 10,
+        rating: 10,
+        tags: ["Rojo", "Cocoa", "Habanero"]
+      }
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,9 +161,11 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+function filteredFood(foodArr, tag) {
+    return foodArr.filter(food => food.tags.includes(tag));
+  }
+  const specTag = filteredFood(foodArr, "Cocoa");
+  console.log(specTag)
 
 //////////////////PROBLEM 5////////////////////
 /* 
