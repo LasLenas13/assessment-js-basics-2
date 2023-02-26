@@ -164,6 +164,7 @@ let foodArr = [
 function filteredFood(foodArr, tag) {
     return foodArr.filter(food => food.tags.includes(tag));
   }
+  
   const specTag = filteredFood(foodArr, "Cocoa");
   console.log(specTag)
 
@@ -208,6 +209,9 @@ function filteredFood(foodArr, tag) {
 
 //CODE HERE
 
+function filterByProperty(property, number, type){
+
+}
 
 /*
     Invoke the `filterByProperty` function passing
